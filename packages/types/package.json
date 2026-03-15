@@ -1,0 +1,15 @@
+{
+  "name": "@canchaya/types",
+  "version": "0.1.0",
+  "description": "Shared types for CanchaYa",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {}
+}
