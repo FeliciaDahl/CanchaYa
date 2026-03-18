@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: canchaya-postgres
+    environment:
+      POSTGRES_USER: canchaya
+      POSTGRES_PASSWORD: canchaya
+      POSTGRES_DB: canchaya_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    networks:
+      - canchaya-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U canchaya"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+    driver: local
+
+networks:
+  canchaya-network:
+    driver: bridge

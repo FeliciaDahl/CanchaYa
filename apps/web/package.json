@@ -1,0 +1,15 @@
+{
+  "name": "@canchaya/web",
+  "version": "0.1.0",
+  "description": "React Native Web app for CanchaYa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'Phase 6 - TBD'",
+    "build": "echo 'Phase 6 - TBD'",
+    "start": "echo 'Phase 6 - TBD'",
+    "lint": "echo 'Phase 6 - TBD'",
+    "test": "echo 'Phase 6 - TBD'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

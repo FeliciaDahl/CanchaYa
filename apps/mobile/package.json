@@ -1,0 +1,14 @@
+{
+  "name": "@canchaya/mobile",
+  "version": "0.1.0",
+  "description": "React Native mobile app for CanchaYa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'Phase 5 - TBD'",
+    "build": "echo 'Phase 5 - TBD'",
+    "lint": "echo 'Phase 5 - TBD'",
+    "test": "echo 'Phase 5 - TBD'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
