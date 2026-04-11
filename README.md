@@ -1,5 +1,5 @@
 # 🎾 CanchaYa | Padel Platform
-> **The ultimate padel booking engine for the Argentinian market.** > Built for speed, dark mode aesthetics, and 10-second bookings.
+> **The ultimate padel booking engine.** > Built for speed, dark mode aesthetics, and 10-second bookings.
 
 ---
 
