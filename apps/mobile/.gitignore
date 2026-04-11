@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.jest/
+
+# Production
+dist/
+build/
+*.ipa
+*.apk
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.*.local
+*.log
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+
+# IDE
+*.iml
+.gradle
+.idea/
+local.properties
+*.jks
+*.keystore
+
+# OS
+Thumbs.db
+
+
