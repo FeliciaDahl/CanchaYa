@@ -18,18 +18,20 @@ export default function App() {
   const bootstrapAsync = async () => {
     try {
       // Restore tokens from AsyncStorage and set them in the API client
-      const hasValidTokens = await authService.restoreTokens();
+      const tokens = await authService.getStoredTokens();
       
-      if (hasValidTokens) {
-        // If tokens exist, dispatch login success to set authenticated state in Redux
-        // User data can be fetched from /auth/me endpoint if needed
-        store.dispatch(
-          loginSuccess({
-            user: { id: '', email: '', name: '' },
-            accessToken: '',
-            refreshToken: '',
-          }),
-        );
+      if (tokens) {
+        const restored = await authService.restoreTokens();
+        if (restored) {
+          // Update Redux state with restored tokens
+          store.dispatch(
+            loginSuccess({
+              user: { id: '', email: '', name: '' },
+              accessToken: tokens.accessToken,
+              refreshToken: tokens.refreshToken,
+            }),
+          );
+        }
       }
     } catch (error) {
       console.warn('Failed to restore session:', error);
