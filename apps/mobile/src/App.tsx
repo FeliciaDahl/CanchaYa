@@ -6,6 +6,7 @@ import { store } from './redux/store';
 import { loginSuccess } from './redux/slices/authSlice';
 import { darkTheme } from './theme';
 import { authService } from './services/auth.service';
+import { webSocketService } from './services/websocket.service';
 import { RootNavigator } from './navigation/RootNavigator';
 
 export default function App() {
@@ -31,6 +32,15 @@ export default function App() {
               refreshToken: tokens.refreshToken,
             }),
           );
+
+          // Connect to WebSocket if tokens are available
+          try {
+            await webSocketService.connect(tokens.accessToken);
+            console.log('WebSocket connected automatically');
+          } catch (wsError) {
+            console.warn('Failed to connect to WebSocket:', wsError);
+            // Non-critical error - app can still work without WebSocket
+          }
         }
       }
     } catch (error) {
