@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { darkTheme } from '../theme';
 import { NearbyCourtScreen } from '../screens/discovery/NearbyCourtScreen';
 import { FacilityDetailScreen } from '../screens/discovery/FacilityDetailScreen';
+import { TimeSlotSelectionScreen, BookingReviewScreen } from '../screens/booking';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -37,6 +38,20 @@ function DiscoveryStack() {
         component={FacilityDetailScreen}
         options={{
           title: 'Court Details',
+        }}
+      />
+      <Stack.Screen
+        name="TimeSlotSelection"
+        component={TimeSlotSelectionScreen}
+        options={{
+          title: 'Select Time Slot',
+        }}
+      />
+      <Stack.Screen
+        name="BookingReview"
+        component={BookingReviewScreen}
+        options={{
+          title: 'Review Booking',
         }}
       />
     </Stack.Navigator>

@@ -42,8 +42,8 @@ export function FacilityDetailScreen({ navigation, route }: FacilityDetailScreen
   }
 
   const handleBooking = () => {
-    // Navigate to booking flow
-    navigation.navigate('Booking', { courtId: selectedCourt.id });
+    // Navigate to time slot selection
+    navigation.navigate('TimeSlotSelection', { courtId: selectedCourt.id });
   };
 
   const toggleFavorite = () => {
