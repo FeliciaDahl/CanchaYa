@@ -9,7 +9,5 @@
     "start": "echo 'Phase 6 - TBD'",
     "lint": "echo 'Phase 6 - TBD'",
     "test": "echo 'Phase 6 - TBD'"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  }
 }

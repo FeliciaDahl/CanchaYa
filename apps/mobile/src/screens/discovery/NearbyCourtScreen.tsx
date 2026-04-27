@@ -85,7 +85,7 @@ export function NearbyCourtScreen({ navigation }: NearbyCourtScreenProps) {
         longitude,
         maxDistance,
       );
-      dispatch(fetchCourtSuccess(response.courts));
+      dispatch(fetchCourtSuccess(response?.courts || []));
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Failed to fetch courts';
       dispatch(fetchCourtFailure(errorMsg));
