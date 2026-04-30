@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Booking, TimeSlot } from '../../../database/entities/index';
+import { Booking, TimeSlot } from '../../database/entities';
 import { BookingsService } from './services/bookings.service';
 import { BookingsController } from './controllers/bookings.controller';
 

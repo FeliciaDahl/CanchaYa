@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Court, Facility } from '../../../database/entities/index';
+import { Court, Facility } from '../../database/entities';
 import { CourtsService } from './services/courts.service';
 import { CourtsController } from './controllers/courts.controller';
 
