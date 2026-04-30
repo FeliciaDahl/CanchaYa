@@ -2489,6 +2489,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/platform-socket.io@npm:^11.1.19":
+  version: 11.1.19
+  resolution: "@nestjs/platform-socket.io@npm:11.1.19"
+  dependencies:
+    socket.io: "npm:4.8.3"
+    tslib: "npm:2.8.1"
+  peerDependencies:
+    "@nestjs/common": ^11.0.0
+    "@nestjs/websockets": ^11.0.0
+    rxjs: ^7.1.0
+  checksum: 10c0/bfc772db0305593939ba8724b9576c1c5a7c1c601cd2c2be425bdb9895a1c1321ee77de84b85554370d8f7b027576a4dbff15508488de464c362314ddffcfdf9
+  languageName: node
+  linkType: hard
+
 "@nestjs/schematics@npm:^10.0.1, @nestjs/schematics@npm:^10.0.2":
   version: 10.2.3
   resolution: "@nestjs/schematics@npm:10.2.3"
@@ -4997,6 +5011,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "canchaya@workspace:."
   dependencies:
+    "@nestjs/platform-socket.io": "npm:^11.1.19"
     eslint: "npm:^8.55.0"
     prettier: "npm:^3.1.0"
     typescript: "npm:^5.3.3"
@@ -12469,7 +12484,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socket.io@npm:^4.7.2":
+"socket.io@npm:4.8.3, socket.io@npm:^4.7.2":
   version: 4.8.3
   resolution: "socket.io@npm:4.8.3"
   dependencies:
